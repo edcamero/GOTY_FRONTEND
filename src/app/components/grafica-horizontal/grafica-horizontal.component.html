@@ -1,5 +1,6 @@
-<ngx-charts-bar-vertical
-  [view]="view"
+<div class="chart-container">
+  <ngx-charts-bar-horizontal
+  
   [scheme]="colorScheme"
   [results]="results"
   [gradient]="gradient"
@@ -11,4 +12,5 @@
   [xAxisLabel]="xAxisLabel"
   [yAxisLabel]="yAxisLabel"
   (select)="onSelect($event)">
-</ngx-charts-bar-vertical>
+  </ngx-charts-bar-horizontal>
+</div>
