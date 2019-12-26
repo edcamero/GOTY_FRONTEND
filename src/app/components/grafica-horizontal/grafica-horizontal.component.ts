@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnDestroy, Input } from '@angular/core';
 
 @Component({
   selector: 'app-grafica-horizontal',
@@ -6,7 +6,8 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
   styleUrls: ['./grafica-horizontal.component.css']
 })
 export class GraficaHorizontalComponent implements OnDestroy {
-  results: any[]=[
+  @Input() results:any[]=[];
+ /*  results: any[] = [
     {
       "name": "Juego 1",
       "value": 20
@@ -24,10 +25,10 @@ export class GraficaHorizontalComponent implements OnDestroy {
       "name": "Juego 4",
       "value": 10
     }
-  ];
+  ]; */
 
 
- 
+
 
   // options
   showXAxis = true;
@@ -47,7 +48,7 @@ export class GraficaHorizontalComponent implements OnDestroy {
   constructor() {
 
 
-    this.intervalo=setInterval(()=>{
+    /* this.intervalo=setInterval(()=>{
       const newRerults=[...this.results]
       for (let i in newRerults){
         newRerults[i].value=Math.round(Math.random()*100);
@@ -55,8 +56,8 @@ export class GraficaHorizontalComponent implements OnDestroy {
 
 
       this.results=[...newRerults]
-    },1500);
-    
+    },1500); */
+
   }
 
   onSelect(event) {
@@ -64,7 +65,7 @@ export class GraficaHorizontalComponent implements OnDestroy {
   }
 
 
-  ngOnDestroy(){
-    clearInterval(this.intervalo);
+  ngOnDestroy() {
+    // clearInterval(this.intervalo);
   }
 }
