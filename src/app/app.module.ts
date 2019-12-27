@@ -12,13 +12,15 @@ import { InicioComponent } from './pages/inicio/inicio.component';
 import { GotyComponent } from './pages/goty/goty.component';
 import { ComponentsModule } from './components/components.module';
 import { environment } from 'src/environments/environment';
+import { NewGameComponent } from './pages/new-game/new-game.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     InicioComponent,
-    GotyComponent
+    GotyComponent,
+    NewGameComponent
   ],
   imports: [
     BrowserModule,
