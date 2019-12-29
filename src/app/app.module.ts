@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import {HttpClientModule} from '@angular/common/http';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
-
+import {FormsModule  } from '@angular/forms';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -13,6 +13,7 @@ import { GotyComponent } from './pages/goty/goty.component';
 import { ComponentsModule } from './components/components.module';
 import { environment } from 'src/environments/environment';
 import { NewGameComponent } from './pages/new-game/new-game.component';
+
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { NewGameComponent } from './pages/new-game/new-game.component';
     ComponentsModule,
     HttpClientModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

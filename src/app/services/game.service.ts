@@ -41,4 +41,14 @@ export class GameService {
   )
 
   }
+
+  newGame(nameForm,urlForm){
+    return this.http.post(`${environment.url}/api/goty`,{name:nameForm,url:urlForm})
+    .pipe(
+      catchError(err=>{
+        //console.log('Error en la petición');
+        return of(err.error)
+      })
+    )
+  }
 }
