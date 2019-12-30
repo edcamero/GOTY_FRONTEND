@@ -16,7 +16,7 @@ export class GameService {
   constructor(private http: HttpClient) { }
 
   getNominados(){
-    if(this.juegos.length==0){
+    if(this.juegos.length===0){
       console.log('desde internet');
       return this.http.get<Game[]>(`${environment.url}/api/goty`)
       .pipe(
