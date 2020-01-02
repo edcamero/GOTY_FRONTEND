@@ -18,7 +18,7 @@ export class GameService {
   getNominados(){
     if(this.juegos.length===0){
       console.log('desde internet');
-      return this.http.get<Game[]>(`${environment.url}/api/goty`)
+      return this.http.get<Game[]>(`${environment.url}/game`)
       .pipe(
         tap(
           juegos=>this.juegos=juegos
@@ -32,7 +32,7 @@ export class GameService {
 
 
   votar(id:string){
-  return this.http.post(`${environment.url}/api/goty/`+id,{})
+  return this.http.post(`${environment.url}/game/`+id,{})
   .pipe(
     catchError(err=>{
       //console.log('Error en la petición');
@@ -43,7 +43,7 @@ export class GameService {
   }
 
   newGame(nameForm,urlForm){
-    return this.http.post(`${environment.url}/api/goty`,{name:nameForm,url:urlForm})
+    return this.http.post(`${environment.url}/game`,{name:nameForm,url:urlForm})
     .pipe(
       catchError(err=>{
         //console.log('Error en la petición');

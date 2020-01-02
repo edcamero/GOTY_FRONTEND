@@ -28,7 +28,7 @@ import { NewGameComponent } from './pages/new-game/new-game.component';
     AppRoutingModule,
     ComponentsModule,
     HttpClientModule,
-    AngularFireModule.initializeApp(environment.firebase),
+    //AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     FormsModule
   ],

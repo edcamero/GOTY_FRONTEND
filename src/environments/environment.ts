@@ -4,16 +4,8 @@
 
 export const environment = {
   production: false,
-  url:'http://localhost:5000/firestore-grafica-1f3c9/us-central1',
-  firebase: {
-    apiKey: "AIzaSyBhnJyHs44U67p1ppTOEtnaVPxrMSUi6w0",
-    authDomain: "firestore-grafica-1f3c9.firebaseapp.com",
-    databaseURL: "https://firestore-grafica-1f3c9.firebaseio.com",
-    projectId: "firestore-grafica-1f3c9",
-    storageBucket: "firestore-grafica-1f3c9.appspot.com",
-    messagingSenderId: "942427280496",
-    appId: "1:942427280496:web:6cdcc64abefd2dae6390b5"
-  }
+  url:'http://localhost:1337',
+  
 };
 
 /*

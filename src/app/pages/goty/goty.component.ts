@@ -24,7 +24,7 @@ export class GotyComponent implements OnInit {
   }
 
   votarJuego(juego:Game){
-      this.gameService.votar(juego.id)
+      this.gameService.votar(juego.idgame)
       .subscribe(
         (resp:{ok:boolean,mensaje:string})=>{
           //console.log(resp);
